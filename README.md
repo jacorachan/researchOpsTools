@@ -1,4 +1,5 @@
 # userresearchtools
+Proof of concept of a list of user research tools from #ResearchOps Slack community.
 
 ## Project setup
 ```
@@ -14,16 +15,5 @@ yarn run serve
 ```
 yarn run build
 ```
-
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## License
+All code is under [The MIT License](https://opensource.org/licenses/MIT).
