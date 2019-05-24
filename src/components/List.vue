@@ -10,14 +10,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr class="hover:bg-gray-100">
-          <td class="py-4 px-6 border-b border-gray-200">AttrakDiff</td>
-          <td class="py-4 px-6 border-b border-gray-200">http://attrakdiff.de</td>
-          <td class="py-4 px-6 border-b border-gray-200">
-            <a href="#" class="text-gray-100 font-bold py-1 px-3 rounded text-xs bg-green-400 mr-1 hover:bg-green-600">Remote research</a>
-            <a href="#" class="text-gray-100 font-bold py-1 px-3 rounded text-xs bg-blue-400 hover:bg-blue-600">Usability testing</a>
-          </td>
-        </tr>
+        <product-row v-for='product in products' :key='product.id' :product='product'></product-row>
       </tbody>
     </table>
   </div>
@@ -25,7 +18,43 @@
 </template>
 
 <script>
+import ProductRow from './ProductRow'
+
 export default {
-  name: 'List'
+  name: 'List',
+  components: {
+    ProductRow
+  },
+  data () {
+    return {
+      products: [
+        {
+          'Name': '4qSurvey',
+          'URL': 'http://www.iperceptions.com/en/',
+          'Category': 'Survey, polling and feedback'
+        },
+        {
+          'Name': 'A/B Test Master',
+          'URL': 'http://www.abtestmaster.com',
+          'Category': 'Multivariate testing, split, A/B testing'
+        },
+        {
+          'Name': 'Access (Cint)',
+          'URL': 'https://www.cint.com/solutions/access',
+          'Category': 'Panel, Survey, polling and feedback'
+        },
+        {
+          'Name': 'Adobe Brackets',
+          'URL': 'http://brackets.io',
+          'Category': 'Text editor'
+        },
+        {
+          'Name': 'AirServer',
+          'URL': 'http://www.airserver.com',
+          'Category': 'Mobile research, Lab tech'
+        }
+      ]
+    }
+  }
 }
 </script>
